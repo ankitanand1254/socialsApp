@@ -1,4 +1,24 @@
-body{
-    margin: 0;
-    /* text-align: center; */
-}
+body {
+  /* text-align: center; */
+  background-color: #FFE6F7;
+  font-family: 'Oswald', sans-serif; }
+  body #layout-main {
+    height: 100%; }
+
+h2 {
+  color: #905E96;
+  padding: 30px; }
+
+.header {
+  padding: 20px 10px; }
+
+.sign {
+  padding: 10px;
+  margin: 20px;
+  margin-top: 5%;
+  border-width: 20px;
+  border-radius: 10px;
+  box-sizing: border-box; }
+
+.button {
+  padding-top: 5px; }

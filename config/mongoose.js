@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/socialApp');
+mongoose.connect('mongodb://localhost/socialsApp');
 
 const db = mongoose.connection;
 

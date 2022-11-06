@@ -4,18 +4,25 @@
             <%= title  %>
         </title>
         <link rel="stylesheet" href="/css/layout.css">
+        <link rel="stylesheet" href="/css/header.css">
+        <link rel="stylesheet" href="/css/footer.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/3f3f32b892.js" crossorigin="anonymous"></script>
+        
         <%- style %>
         
     </head>
 
     <body>
         <%- include('_header'); %>
-
+        <main id="layout-main">
         <%- body %>
-
+        </main>
 
         <%- include('_footer'); %>
-
+        
         <%- script %>
         
     </body>
