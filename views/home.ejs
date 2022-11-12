@@ -1,10 +1,10 @@
-
+<link rel="stylesheet" href="/css/home.css">
         <h2>
             <%= title %>
         </h2>
 
-
-        <section id="feed-posts">
+<div id="home-container">
+    <section id="feed-posts">
             <h4>Posts</h4>
             <% if(locals.user) { %>
             <form action="/posts/create" id="new-post-form" method="post">
@@ -20,9 +20,9 @@
                     <% } %>
                 </ul>
             </div>
-        </section>
+    </section>
 
-        <section id="user-friends">
+    <section id="user-friends">
             <h4>Friends</h4>
             <% for(u of all_users) { %>
                 <p>
@@ -30,4 +30,5 @@
                 </p>
 
             <% } %>
-        </section>
+    </section>
+</div>

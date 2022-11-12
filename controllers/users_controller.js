@@ -1,4 +1,5 @@
 const User = require('../models/user');
+const passport = require('passport');
 
 
 module.exports.profile = function(req, res){
@@ -8,6 +9,16 @@ module.exports.profile = function(req, res){
             profile_user: user
     });
     });
+}
+
+module.exports.update = function(req, res){
+    if(req.user.id == req.params.id){
+        User.findByIdAndUpdate(req.params.id, req.body, function(err, user){
+            return res.redirect('back');
+        });
+    }else{
+        return res.status(401).send('Unauthorized');
+    }
 }
 
 
@@ -57,12 +68,16 @@ module.exports.create = function(req, res){
 
 // sign in and create a session for the user
 module.exports.createSession = function(req, res){
+    req.flash('success', 'Logged in Successfully');
     return res.redirect('/');
+
 }
 
 module.exports.destroySession = function(req, res){
     req.logout(function(err) {
         if (err) { return next(err); }
-        res.redirect('/');
+        req.flash('success', 'You have been logged out');
+        return res.redirect('/');
 });
+
 }

@@ -3,6 +3,7 @@
         <title>
             <%= title  %>
         </title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
         <link rel="stylesheet" href="/css/layout.css">
         <link rel="stylesheet" href="/css/header.css">
         <link rel="stylesheet" href="/css/footer.css">
@@ -10,6 +11,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/3f3f32b892.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css" integrity="sha512-0p3K0H3S6Q4bEWZ/WmC94Tgit2ular2/n0ESdfEX8l172YyQj8re1Wu9s/HT9T/T2osUw5Gx/6pAZNk3UKbESw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         
         <%- style %>
         
@@ -17,6 +19,7 @@
 
     <body>
         <%- include('_header'); %>
+        
         <main id="layout-main">
         <%- body %>
         </main>
@@ -24,6 +27,29 @@
         <%- include('_footer'); %>
         
         <%- script %>
+        <script>
+            <% if(flash.success && flash.success.length >0) { %>
+                new Noty({
+                    theme: 'relax',
+                    text: "<%= flash.success%>",
+                    type:'success',
+                    layout:'topRight',
+                    timeout:1500
+                
+                }).show();
+                <% } %>
+
+                <% if(flash.error && flash.error.length >0) { %>
+                new Noty({
+                    theme: 'relax',
+                    text: "<%= flash.error %>",
+                    type:'error',
+                    layout:'topRight',
+                    timeout:1500
+                
+                }).show();
+                <% } %>
+        </script>
         
     </body>
 </html>
