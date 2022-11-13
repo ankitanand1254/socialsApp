@@ -1,5 +1,11 @@
 #home-container{
     display:flex;
+    a{
+        color: #905E96;
+    }
+    a:hover{
+        color: rgba(214, 0, 0, 0.747);
+    }
     
     
     #feed-posts{
@@ -12,5 +18,11 @@
         padding: 10px;
         border-left: 1px solid lightgrey;
         height: 100%;
-    }
+        a{
+            color: #5C2E7E;
+        }
+        a:hover{
+            color: black;
+        }
+}
 }

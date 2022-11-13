@@ -1,5 +1,9 @@
 #home-container {
   display: flex; }
+  #home-container a {
+    color: #905E96; }
+  #home-container a:hover {
+    color: rgba(214, 0, 0, 0.747); }
   #home-container #feed-posts {
     width: 70%;
     padding: 10px; }
@@ -8,3 +12,7 @@
     padding: 10px;
     border-left: 1px solid lightgrey;
     height: 100%; }
+    #home-container #user-friends a {
+      color: #5C2E7E; }
+    #home-container #user-friends a:hover {
+      color: black; }
