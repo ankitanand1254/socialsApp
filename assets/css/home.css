@@ -1,7 +1,8 @@
 #home-container {
   display: flex; }
   #home-container a {
-    color: #905E96; }
+    color: #905E96;
+    padding-right: 10px; }
   #home-container a:hover {
     color: rgba(214, 0, 0, 0.747); }
   #home-container #feed-posts {
