@@ -35,6 +35,7 @@
 
             <% } %>
     </section>
+    <%- include('_chat_box') -%>
 </div>
 <!--importing this script for creating the comments-->
 <script src="/js/home_post_comments.js"></script>
@@ -47,3 +48,10 @@
         let toogleLike = new ToggleLike(self);
     });
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.3/socket.io.js"></script>
+<script src="/js/chat_engine.js"></script>
+<% if (locals.user) { %>
+<script>
+    new ChatEngine('user-chat-box', '<%= locals.user._id %>')
+</script>
+<% } %>
