@@ -38,7 +38,7 @@ const development = {
 
 
 const production = {
-    name: 'production',
+    name: 'production', 
     asset_path: process.env.SOCIALSAPP_ASSET_PATH,
     session_cookie_key: process.env.SOCIALSAPP_SESSION_COOKIE_KEY,
     db: process.env.SOCIALSAPP_DB,
@@ -65,4 +65,4 @@ const production = {
 
 
 
-module.exports = eval(process.env.SOCIALSAPP_ENVIRONMENT) == undefined ? development: eval(process.env.SOCIALSAPP_ENVIRONMENT);
+module.exports = development;
